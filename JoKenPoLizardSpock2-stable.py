@@ -108,9 +108,9 @@ def main():
         print('\nPedra, Papel, Tesoura, Lagarto e Spock\n')
        
         for index, value in enumerate(choices):
-            print('%d - %s' % (index, value))
+            print(('%d - %s' % (index, value)))
  
-        choice = int(input('\nEscolha entre os números do menu: '))
+        choice = int(eval(input('\nEscolha entre os números do menu: ')))
  
         if choice == CONST_EXIT:
             print('\nObrigado por jogar\n')
@@ -122,8 +122,8 @@ def main():
  
         cpu = random.randint(CONST_ROCK, CONST_SPOCK)
  
-        print('\nVocê escolheu %s' % choices[choice])
-        print('Computador escolheu %s' % choices[cpu])
+        print(('\nVocê escolheu %s' % choices[choice]))
+        print(('Computador escolheu %s' % choices[cpu]))
  
         whoWin(choice, cpu)
  
